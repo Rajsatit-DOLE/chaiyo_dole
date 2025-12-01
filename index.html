@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>เว็บไซต์โรงเรียนออนไลน์</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
   <style>
         body {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             background-color: #f5f7fa;
             width: 100%;
         }
@@ -92,7 +92,7 @@
             border: none;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             transition: background 0.3s;
             position: relative;
         }
@@ -138,7 +138,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             text-decoration: none;
             display: inline-block;
         }
@@ -189,6 +189,8 @@
             color: #475569;
             line-height: 1.8;
             margin-bottom: 1rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         .read-more {
@@ -262,8 +264,8 @@
         /* News Section */
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
         .news-card {
@@ -300,6 +302,30 @@
             word-wrap: break-word;
         }
 
+        .news-card .news-item-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .news-card .news-item-images img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f8fafc;
+            padding: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .news-card .news-item-images img:hover {
+            transform: scale(1.05);
+        }
+
         /* Districts Section */
         .districts-section {
             background: white;
@@ -324,7 +350,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             transition: all 0.3s;
             text-align: center;
             text-decoration: none;
@@ -391,7 +417,7 @@
             padding: 0.8rem;
             border: 2px solid #e2e8f0;
             border-radius: 8px;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             font-size: 1rem;
             transition: border-color 0.3s;
         }
@@ -409,7 +435,7 @@
             border: none;
             border-radius: 8px;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             cursor: pointer;
             transition: background 0.3s;
             font-size: 1rem;
@@ -432,7 +458,7 @@
             border: 2px solid #e2e8f0;
             border-radius: 8px;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             cursor: pointer;
             margin-top: 0.8rem;
             font-size: 1rem;
@@ -488,7 +514,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
         }
 
         .btn-logout:hover {
@@ -503,7 +529,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             font-size: 1rem;
         }
 
@@ -538,7 +564,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             transition: all 0.3s;
         }
 
@@ -562,7 +588,7 @@
 
         .image-upload-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
@@ -574,7 +600,7 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
-            min-height: 150px;
+            min-height: 250px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -594,9 +620,11 @@
 
         .image-preview {
             max-width: 100%;
-            max-height: 120px;
+            max-height: 200px;
             border-radius: 6px;
             margin-bottom: 0.5rem;
+            object-fit: contain;
+            background: #f8fafc;
         }
 
         .news-list, .personnel-admin-list {
@@ -637,16 +665,20 @@
 
         .news-item-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 0.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.8rem;
             margin-top: 1rem;
         }
 
         .news-item-images img {
             width: 100%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 6px;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f8fafc;
+            padding: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .list-item-actions {
@@ -662,7 +694,7 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             font-weight: 600;
             white-space: nowrap;
         }
@@ -678,7 +710,7 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             font-weight: 600;
             white-space: nowrap;
         }
@@ -704,7 +736,7 @@
             background: transparent;
             border: none;
             padding: 1rem 1.5rem;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             font-weight: 600;
             font-size: 1rem;
             color: #64748b;
@@ -853,7 +885,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             transition: all 0.3s;
         }
 
@@ -914,6 +946,14 @@
                 right: 1rem;
                 left: 1rem;
             }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-upload-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
   <style>@view-transition { navigation: auto; }</style>
@@ -929,7 +969,6 @@
       <li><a href="#home" class="nav-link">หน้าแรก</a></li>
       <li><a href="#history" class="nav-link">ประวัติ</a></li>
       <li><a href="#personnel" class="nav-link">บุคลากร</a></li>
-      <li><a href="#news" class="nav-link">กระดานข่าว</a></li>
       <li><button class="login-btn" id="loginBtn">เข้าสู่ระบบครู</button></li>
      </ul>
     </div>
@@ -951,7 +990,16 @@
       <div class="theme-options" id="themeOptions"><button class="theme-btn active" data-theme="blue" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);" title="น้ำเงิน"></button> <button class="theme-btn" data-theme="green" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" title="เขียว"></button> <button class="theme-btn" data-theme="purple" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);" title="ม่วง"></button> <button class="theme-btn" data-theme="red" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);" title="แดง"></button> <button class="theme-btn" data-theme="orange" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);" title="ส้ม"></button>
       </div>
      </div><!-- Admin Tabs -->
-     <div class="admin-tabs"><button class="admin-tab active" data-tab="news">ข่าวประชาสัมพันธ์</button> <button class="admin-tab" data-tab="personnel">บุคลากร</button> <button class="admin-tab" data-tab="districts">ลิงค์ห้องเรียนออนไลน์</button>
+     <div class="admin-tabs"><button class="admin-tab active" data-tab="news">ข่าวประชาสัมพันธ์</button> <button class="admin-tab" data-tab="personnel">บุคลากร</button> <button class="admin-tab" data-tab="history">ประวัติโรงเรียน</button> <button class="admin-tab" data-tab="districts">ลิงค์ห้องเรียนออนไลน์</button>
+     </div><!-- History Tab -->
+     <div class="admin-tab-content" id="historyTab">
+      <h3 style="margin-bottom: 1.5rem; color: #1e293b;">แก้ไขประวัติโรงเรียน</h3>
+      <form id="historyFormElement">
+       <div class="form-group"><label class="form-label" for="historyTitle">หัวข้อ *</label> <input type="text" id="historyTitle" class="form-input" required>
+       </div>
+       <div class="form-group"><label class="form-label" for="historyContent">เนื้อหาประวัติโรงเรียน *</label> <textarea id="historyContent" class="form-input" rows="10" required style="min-height: 250px;"></textarea>
+       </div><button type="submit" class="btn-submit">บันทึกประวัติ</button>
+      </form>
      </div><!-- News Tab -->
      <div class="admin-tab-content active" id="newsTab">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;"><button class="btn-add" id="addNewsBtn">+ เพิ่มข่าวใหม่</button>
@@ -965,26 +1013,28 @@
         </div>
         <div class="form-group"><label class="form-label" for="newsContent">รายละเอียด *</label> <textarea id="newsContent" class="form-input" rows="8" required style="min-height: 200px;"></textarea>
         </div>
-        <div class="form-group"><label class="form-label">รูปภาพ (สูงสุด 4 รูป)</label>
+        <div class="form-group"><label class="form-label">รูปภาพ (สูงสุด 4 รูป) - รองรับขนาดใหญ่ 1444x2000 px</label>
          <div style="background: #e0f2fe; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
           <p style="font-size: 0.95rem; color: #075985; margin: 0 0 0.5rem 0; font-weight: 600;">💡 3 วิธีเพิ่มรูปภาพ:</p>
           <ol style="margin: 0; padding-left: 1.5rem; color: #0c4a6e; font-size: 0.9rem; line-height: 1.6;">
-           <li><strong>อัพโหลดจากเครื่อง</strong> - คลิกกรอบด้านล่าง (เก็บในเครื่อง, จำกัดรูป)</li>
-           <li><strong>ใส่ลิงค์จาก Google Drive/Imgur</strong> - แนะนำถ้ามีรูปเยอะ ✨</li>
+           <li><strong>อัพโหลดจากเครื่อง</strong> - รองรับรูปขนาดใหญ่ถึง 1444x2000 px ✅</li>
+           <li><strong>ใส่ลิงค์จาก Google Drive/Imgur</strong> - แนะนำสำหรับรูปขนาดใหญ่ ✨</li>
            <li><strong>อัพไปที่ <a href="https://imgur.com/upload" target="_blank" rel="noopener noreferrer" style="color: #0369a1; text-decoration: underline;">Imgur</a> หรือ <a href="https://imgbb.com" target="_blank" rel="noopener noreferrer" style="color: #0369a1; text-decoration: underline;">ImgBB</a></strong> แล้วคัดลอกลิงค์มาใส่</li>
           </ol>
+          <p style="font-size: 0.85rem; color: #075985; margin: 0.8rem 0 0 0; font-weight: 600;">📐 <strong>ขนาดแนะนำ:</strong> 1444 x 2000 pixels (อัตราส่วน 72:100)<br>
+            📊 <strong>ข้อมูล:</strong> รูปจะแสดงผลอัตโนมัติตามขนาดจริง ไม่บิดเบี้ยว</p>
          </div>
          <div class="upload-tabs"><button type="button" class="upload-tab-btn active" data-tab="upload">📤 อัพโหลดไฟล์</button> <button type="button" class="upload-tab-btn" data-tab="link">🔗 ใส่ลิงค์</button>
          </div><!-- Upload Tab -->
          <div class="upload-tab-content active" id="uploadTab">
           <div class="image-upload-grid">
-           <div class="image-upload-box" id="newsUploadBox1" data-index="1"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 1</span> <input type="file" id="newsImageInput1" accept="image/*" style="display: none;">
+           <div class="image-upload-box" id="newsUploadBox1" data-index="1"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 1</span> <span style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">รองรับ 1444x2000px</span> <input type="file" id="newsImageInput1" accept="image/*" style="display: none;">
            </div>
-           <div class="image-upload-box" id="newsUploadBox2" data-index="2"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 2</span> <input type="file" id="newsImageInput2" accept="image/*" style="display: none;">
+           <div class="image-upload-box" id="newsUploadBox2" data-index="2"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 2</span> <span style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">รองรับ 1444x2000px</span> <input type="file" id="newsImageInput2" accept="image/*" style="display: none;">
            </div>
-           <div class="image-upload-box" id="newsUploadBox3" data-index="3"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 3</span> <input type="file" id="newsImageInput3" accept="image/*" style="display: none;">
+           <div class="image-upload-box" id="newsUploadBox3" data-index="3"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 3</span> <span style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">รองรับ 1444x2000px</span> <input type="file" id="newsImageInput3" accept="image/*" style="display: none;">
            </div>
-           <div class="image-upload-box" id="newsUploadBox4" data-index="4"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 4</span> <input type="file" id="newsImageInput4" accept="image/*" style="display: none;">
+           <div class="image-upload-box" id="newsUploadBox4" data-index="4"><span style="font-size: 2rem;">📷</span> <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ 4</span> <span style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">รองรับ 1444x2000px</span> <input type="file" id="newsImageInput4" accept="image/*" style="display: none;">
            </div>
           </div>
          </div><!-- Link Tab -->
@@ -1049,8 +1099,8 @@
     </div>
     <div class="content-grid"><!-- History Section -->
      <div id="history" class="section-card">
-      <h2 class="section-title">ประวัติโรงเรียน</h2>
-      <p class="section-text">ก่อตั้งเมื่อปี พ.ศ. .... โดยมีวัตถุประสงค์เพื่อขยายโอกาสทางการศึกษาและพัฒนาคุณภาพการศึกษาให้กับเยาวชนในท้องถิ่น</p><a href="#" class="read-more">อ่านเพิ่มเติม →</a>
+      <h2 class="section-title" id="historyDisplayTitle">ประวัติโรงเรียน</h2>
+      <p class="section-text" id="historyDisplayContent"></p>
      </div>
     </div><!-- Personnel Section -->
     <div id="personnel" class="section-card">
@@ -1059,7 +1109,7 @@
      </div>
     </div><!-- News Section -->
     <div id="news" class="section-card">
-     <h2 class="section-title">กระดานข่าว</h2>
+     <h2 class="section-title">ข่าวประชาสัมพันธ์</h2>
      <div class="news-grid" id="publicNewsGrid">
       <div class="news-card">
        <div class="news-date">
@@ -1087,7 +1137,7 @@
     <div id="online-class" class="districts-section">
      <h2 class="section-title">ห้องเรียนออนไลน์ 9 ตำบล</h2>
      <p style="color: #64748b; margin-bottom: 1.5rem;">คลิกเพื่อเข้าสู่ห้องเรียนออนไลน์ของแต่ละตำบล</p>
-     <div class="districts-grid" id="districtsGrid"><a href="#" class="district-btn district-link" data-index="1">ตำบลที่ 1</a> <a href="#" class="district-btn district-link" data-index="2">ตำบลที่ 2</a> <a href="#" class="district-btn district-link" data-index="3">ตำบลที่ 3</a> <a href="#" class="district-btn district-link" data-index="4">ตำบลที่ 4</a> <a href="#" class="district-btn district-link" data-index="5">ตำบลที่ 5</a> <a href="#" class="district-btn district-link" data-index="6">ตำบลที่ 6</a> <a href="#" class="district-btn district-link" data-index="7">ตำบลที่ 7</a> <a href="#" class="district-btn district-link" data-index="8">ตำบลที่ 8</a> <a href="#" class="district-btn district-link" data-index="9">ตำบลที่ 9</a>
+     <div class="districts-grid" id="districtsGrid"><a href="#" class="district-btn district-link" data-index="1">ตำบลไชโย</a> <a href="#" class="district-btn district-link" data-index="2">ตำบลจรเข้ร้อง</a> <a href="#" class="district-btn district-link" data-index="3">ตำบลไชยภูมิ</a> <a href="#" class="district-btn district-link" data-index="4">ตำบลชะไว</a> <a href="#" class="district-btn district-link" data-index="5">ตำบลตรีนรงค์</a> <a href="#" class="district-btn district-link" data-index="6">ตำบลราชสถิตย์</a> <a href="#" class="district-btn district-link" data-index="7">ตำบลหลักฟ้า</a> <a href="#" class="district-btn district-link" data-index="8">ตำบลชัยฤทธิ์</a> <a href="#" class="district-btn district-link" data-index="9">ตำบลทวราช</a>
      </div>
     </div>
    </div>
@@ -1113,6 +1163,7 @@
             NEWS: 'school_news',
             PERSONNEL: 'school_personnel',
             DISTRICTS: 'school_districts',
+            HISTORY: 'school_history',
             IS_LOGGED_IN: 'school_logged_in',
             THEME: 'school_theme',
             NEWS_SORT: 'school_news_sort'
@@ -1129,6 +1180,7 @@
         let allNewsData = [];
         let allPersonnelData = [];
         let districtLinks = {};
+        let historyData = { title: 'ประวัติโรงเรียน', content: '' };
         let isLoggedIn = false;
         let currentTheme = 'blue';
         let newsSortOrder = 'newest';
@@ -1168,6 +1220,10 @@
                 allNewsData = JSON.parse(localStorage.getItem(STORAGE_KEYS.NEWS) || '[]');
                 allPersonnelData = JSON.parse(localStorage.getItem(STORAGE_KEYS.PERSONNEL) || '[]');
                 districtLinks = JSON.parse(localStorage.getItem(STORAGE_KEYS.DISTRICTS) || '{}');
+                const savedHistory = localStorage.getItem(STORAGE_KEYS.HISTORY);
+                if (savedHistory) {
+                    historyData = JSON.parse(savedHistory);
+                }
                 isLoggedIn = localStorage.getItem(STORAGE_KEYS.IS_LOGGED_IN) === 'true';
                 currentTheme = localStorage.getItem(STORAGE_KEYS.THEME) || 'blue';
                 newsSortOrder = localStorage.getItem(STORAGE_KEYS.NEWS_SORT) || 'newest';
@@ -1176,6 +1232,7 @@
                 allNewsData = [];
                 allPersonnelData = [];
                 districtLinks = {};
+                historyData = { title: 'ประวัติโรงเรียน', content: '' };
                 isLoggedIn = false;
                 currentTheme = 'blue';
                 newsSortOrder = 'newest';
@@ -1187,6 +1244,7 @@
                 localStorage.setItem(STORAGE_KEYS.NEWS, JSON.stringify(allNewsData));
                 localStorage.setItem(STORAGE_KEYS.PERSONNEL, JSON.stringify(allPersonnelData));
                 localStorage.setItem(STORAGE_KEYS.DISTRICTS, JSON.stringify(districtLinks));
+                localStorage.setItem(STORAGE_KEYS.HISTORY, JSON.stringify(historyData));
                 localStorage.setItem(STORAGE_KEYS.THEME, currentTheme);
                 localStorage.setItem(STORAGE_KEYS.NEWS_SORT, newsSortOrder);
             } catch (e) {
@@ -1232,12 +1290,24 @@
             const container = document.getElementById('districtLinksAdmin');
             container.innerHTML = '';
             
+            const districtNames = {
+                1: 'ตำบลไชโย',
+                2: 'ตำบลจรเข้ร้อง',
+                3: 'ตำบลไชยภูมิ',
+                4: 'ตำบลชะไว',
+                5: 'ตำบลตรีนรงค์',
+                6: 'ตำบลราชสถิตย์',
+                7: 'ตำบลหลักฟ้า',
+                8: 'ตำบลชัยฤทธิ์',
+                9: 'ตำบลทวราช'
+            };
+            
             for (let i = 1; i <= 9; i++) {
                 const linkForm = document.createElement('div');
                 linkForm.className = 'section-card';
                 linkForm.innerHTML = `
                     <h3 style="font-size: 1.1rem; font-weight: 600; color: #1e293b; margin-bottom: 1rem;">
-                        ตำบลที่ ${i}
+                        ${districtNames[i]}
                     </h3>
                     <input 
                         type="url" 
@@ -1274,25 +1344,7 @@
         function renderPublicNews() {
             const newsGrid = document.getElementById('publicNewsGrid');
             
-            const defaultCards = `
-                <div class="news-card">
-                    <div class="news-date">15 มกราคม 2567</div>
-                    <h3 class="news-title">ประกาศรับสมัครนักเรียนใหม่</h3>
-                    <p class="news-excerpt">เปิดรับสมัครนักเรียนระดับชั้น ม.1 และ ม.4 ประจำปีการศึกษา 2567</p>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">10 มกราคม 2567</div>
-                    <h3 class="news-title">ตารางสอบกลางภาค</h3>
-                    <p class="news-excerpt">ประกาศตารางสอบกลางภาคเรียนที่ 2 ประจำปีการศึกษา 2566</p>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">5 มกราคม 2567</div>
-                    <h3 class="news-title">กิจกรรมวันเด็ก</h3>
-                    <p class="news-excerpt">ขอเชิญร่วมกิจกรรมวันเด็กแห่งชาติ วันที่ 13 มกราคม 2567</p>
-                </div>
-            `;
-            
-            let newsHtml = defaultCards;
+            let newsHtml = '';
             
             const sortedNews = sortNews(allNewsData);
             sortedNews.forEach(news => {
@@ -1308,7 +1360,7 @@
                     imagesHtml = '<div class="news-item-images">';
                     [news.image1, news.image2, news.image3, news.image4].forEach(img => {
                         if (img) {
-                            imagesHtml += `<img src="${img}" alt="ภาพข่าว">`;
+                            imagesHtml += `<img src="${img}" alt="ภาพข่าว" loading="lazy">`;
                         }
                     });
                     imagesHtml += '</div>';
@@ -1325,6 +1377,18 @@
             });
             
             newsGrid.innerHTML = newsHtml;
+        }
+
+        function renderHistory() {
+            const titleElement = document.getElementById('historyDisplayTitle');
+            const contentElement = document.getElementById('historyDisplayContent');
+            
+            if (titleElement) {
+                titleElement.textContent = historyData.title;
+            }
+            if (contentElement) {
+                contentElement.textContent = historyData.content;
+            }
         }
 
         function renderPublicPersonnel() {
@@ -1345,7 +1409,7 @@
                 personnelItem.className = 'personnel-item';
                 
                 const imageHtml = person.image 
-                    ? `<img src="${person.image}" alt="${person.name}" class="personnel-avatar">`
+                    ? `<img src="${person.image}" alt="${person.name}" class="personnel-avatar" loading="lazy">`
                     : `<div class="personnel-avatar-placeholder">👤</div>`;
 
                 personnelItem.innerHTML = `
@@ -1385,7 +1449,7 @@
                     imagesHtml = '<div class="news-item-images">';
                     [news.image1, news.image2, news.image3, news.image4].forEach(img => {
                         if (img) {
-                            imagesHtml += `<img src="${img}" alt="ภาพข่าว">`;
+                            imagesHtml += `<img src="${img}" alt="ภาพข่าว" loading="lazy">`;
                         }
                     });
                     imagesHtml += '</div>';
@@ -1468,7 +1532,7 @@
                 personnelItem.className = 'list-item';
                 
                 const imageHtml = person.image 
-                    ? `<img src="${person.image}" alt="${person.name}">`
+                    ? `<img src="${person.image}" alt="${person.name}" loading="lazy">`
                     : `<div class="personnel-avatar-small">👤</div>`;
 
                 personnelItem.innerHTML = `
@@ -1531,6 +1595,7 @@
                 uploadBox.innerHTML = `
                     <span style="font-size: 2rem;">📷</span>
                     <span style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">รูปที่ ${i}</span>
+                    <span style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">รองรับ 1444x2000px</span>
                 `;
                 document.getElementById(`newsLinkInput${i}`).value = '';
             }
@@ -1596,6 +1661,11 @@
                 renderDistrictLinksAdmin();
                 updatePersonnelLimitWarning();
                 updateSortButtons();
+                
+                // Load history data into form
+                document.getElementById('historyTitle').value = historyData.title;
+                document.getElementById('historyContent').value = historyData.content;
+                
                 showToast('เข้าสู่ระบบสำเร็จ!');
             } else {
                 document.getElementById('loginError').classList.add('show');
@@ -1621,6 +1691,12 @@
                 this.classList.add('active');
                 const tabName = this.getAttribute('data-tab');
                 document.getElementById(`${tabName}Tab`).classList.add('active');
+                
+                // Load history data when history tab is clicked
+                if (tabName === 'history') {
+                    document.getElementById('historyTitle').value = historyData.title;
+                    document.getElementById('historyContent').value = historyData.content;
+                }
             });
         });
 
@@ -1830,6 +1906,20 @@
             document.getElementById('personnelLinkInput').value = '';
         });
 
+        // History form
+        document.getElementById('historyFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('historyTitle').value;
+            const content = document.getElementById('historyContent').value;
+            
+            historyData = { title, content };
+            saveToStorage();
+            renderHistory();
+            
+            showToast('บันทึกประวัติเรียบร้อย!');
+        });
+
         // Update sort buttons display
         function updateSortButtons() {
             document.querySelectorAll('.sort-btn').forEach(btn => {
@@ -1863,6 +1953,7 @@
             applyTheme(currentTheme);
             renderPublicNews();
             renderPublicPersonnel();
+            renderHistory();
             updateDistrictLinks();
             
             if (isLoggedIn) {
@@ -1873,10 +1964,14 @@
                 renderDistrictLinksAdmin();
                 updatePersonnelLimitWarning();
                 updateSortButtons();
+                
+                // Load history data into form
+                document.getElementById('historyTitle').value = historyData.title;
+                document.getElementById('historyContent').value = historyData.content;
             }
         }
 
         initializeApp();
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a6fb57546818951',t:'MTc2NDU2MTk1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a70176f766d895d',t:'MTc2NDU2NTk2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
